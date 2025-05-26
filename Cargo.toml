@@ -1,0 +1,22 @@
+[package]
+name = "cufile-sys"
+version = "0.1.0"
+edition = "2021"
+description = "Raw FFI bindings for NVIDIA CuFile library"
+authors = ["Serapheim Dimitropoulos <serapheimd@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/sdimitro/cufile-rs"
+keywords = ["nvidia", "cuda", "storage", "ffi"]
+categories = ["external-ffi-bindings"]
+
+[dependencies]
+
+[build-dependencies]
+bindgen = { version = "0.71", optional = true }
+pkg-config = "0.3"
+
+[features]
+default = []
+# Enable this feature if you want to generate bindings at build time
+# Otherwise, pre-generated bindings will be used
+generate-bindings = ["dep:bindgen"]
