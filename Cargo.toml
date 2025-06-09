@@ -12,7 +12,7 @@ categories = ["external-ffi-bindings"]
 [dependencies]
 
 [build-dependencies]
-bindgen = { version = "0.71", optional = true }
+bindgen = { version = "0.72", optional = true }
 pkg-config = "0.3"
 
 [features]
